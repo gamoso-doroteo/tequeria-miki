@@ -1,10 +1,166 @@
-<!DOCTYPE html>
-<html lang="es">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contacto | Taquería Miki</title><link rel="stylesheet" href="css/styles.css"><link rel="icon" href="img/taco.svg" type="image/svg+xml"></head>
-<body>
-<header class="site-header"><nav class="navbar container" aria-label="Navegación principal"><a class="brand" href="index.html"><img src="img/taco.svg" alt="" class="brand-icon"><span>Taquería <b>Miki</b></span></a><button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button><div class="nav-links" id="navLinks"><a href="index.html">Inicio</a><a href="menu.html">Menú</a><a href="nosotros.html">Nosotros</a><a class="active" href="contacto.html">Contacto</a></div></nav></header>
-<main class="contact-page section-pad"><div class="container"><div class="contact-heading"><span class="eyebrow">Estamos para atenderte</span><h1 class="section-title">Contáctanos <span>✳</span></h1><p>¿Tienes alguna duda, comentario o quieres hacer un pedido? ¡Escríbenos! Estaremos encantados de atenderte.</p></div>
-<div class="contact-page-grid"><div class="contact-details"><article><span class="detail-icon">⌖</span><div><h2>Ubicación</h2><p>Av. Principal 123<br>Tu Ciudad, México</p></div></article><article><span class="detail-icon">☎</span><div><h2>Teléfono</h2><p>55-54-30-26-11</p></div></article><article><span class="detail-icon">✉</span><div><h2>Correo electrónico</h2><p>taqueriamiki@gmail.com</p></div></article><a class="map-placeholder large-map" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-pin">●</span><span class="map-label">Abrir Google Maps</span></a></div>
-<div class="panel"><h2 class="panel-title">✉ Envíanos un mensaje</h2><form class="contact-form" data-whatsapp-form><label class="sr-only" for="contactName">Nombre</label><input id="contactName" name="nombre" placeholder="Nombre" required><label class="sr-only" for="contactEmail">Correo electrónico</label><input id="contactEmail" name="correo" type="email" placeholder="Correo electrónico" required><label class="sr-only" for="contactMessage">Mensaje</label><textarea id="contactMessage" name="mensaje" rows="6" placeholder="¿Qué te gustaría pedir o preguntar?" required></textarea><button class="btn btn-yellow" type="submit">Enviar por WhatsApp <span>➤</span></button></form><p class="form-note">Este formulario abre WhatsApp con tu mensaje listo para enviar.</p></div></div></div></main>
-<footer class="site-footer"><div class="container footer-inner"><div class="social-links"><a href="#" data-social="facebook">f</a><a href="#" data-social="instagram">◎</a><a href="#" data-social="tiktok">♪</a></div><p>¡Te esperamos!<br>Taquería Miki</p><a href="index.html" class="footer-taco"><img src="img/taco.svg" alt="Taquería Miki"></a></div></footer><a class="whatsapp-float" data-whatsapp-link href="#" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">☏</a><script src="js/main.js"></script>
-</body></html>
+<style>
+.contacto-section{
+    padding:80px 20px;
+    background:#f8f8f8;
+}
+
+.contacto-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contacto-info-panel,
+.form-premium{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.contacto-info-panel h2,
+.form-premium h2{
+    margin-top:0;
+    color:#142b45;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#ffbf35;
+}
+
+.contact-form button{
+    background:#ffbf35;
+    color:#142b45;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    opacity:.9;
+}
+
+.label{
+    font-weight:bold;
+    color:#777;
+}
+
+.value{
+    font-size:18px;
+    color:#142b45;
+    margin-bottom:15px;
+}
+
+.social-buttons{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.social-buttons .btn{
+    text-decoration:none;
+    background:#142b45;
+    color:white;
+    padding:10px 15px;
+    border-radius:10px;
+}
+
+@media(max-width:768px){
+    .contacto-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+<section class="contacto-section">
+
+    <div class="contacto-grid">
+
+        <div class="contacto-info-panel">
+
+            <h2>Contacto</h2>
+
+            <p>
+                ¿Tienes alguna duda o quieres solicitar información?
+                Ponte en contacto con nosotros.
+            </p>
+
+            <div class="label">Teléfono de atención</div>
+            <div class="value">+52 (55) 1234-5678</div>
+
+            <div class="social-buttons">
+                <a class="btn" href="https://www.instagram.com/redlinemotors4" target="_blank">Instagram</a>
+
+                <a class="btn" href="https://www.facebook.com/share/18vhuQsWsc/" target="_blank">Facebook</a>
+            </div>
+
+        </div>
+
+        <div class="form-premium">
+
+            <h2>✉ Envíanos un mensaje</h2>
+
+            <form
+                class="contact-form"
+                name="contacto"
+                method="POST"
+                data-netlify="true"
+                action="/gracias.html"
+            >
+
+                <input type="hidden" name="form-name" value="contacto">
+
+                <input
+                    type="text"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required
+                >
+
+                <input
+                    type="email"
+                    name="correo"
+                    placeholder="Tu correo electrónico"
+                    required
+                >
+
+                <textarea
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Escribe tu mensaje"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Enviar Mensaje
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
